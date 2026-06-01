@@ -11,13 +11,17 @@ def encode_features(X):
     )
 
 
-def split_data(X, y):
+def split_data(
+    X,
+    y,
+    stratify=None
+):
     return train_test_split(
         X,
         y,
         test_size=0.2,
         random_state=42,
-        stratify=y
+        stratify=stratify
     )
 
 
